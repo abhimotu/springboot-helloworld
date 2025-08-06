@@ -1,0 +1,21 @@
+name: Compile, Build & Push
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  sonar-cloud-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Run SonarCloud Scan
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          run: $ mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
+           -Dsonar.token=$SONAR_TOKEN \
+           -Dsonar.host.url=https://sonarcloud.io \
+           -Dsonar.organization=test-sonar-java \
+           -Dsonar.projectKey=java-helloworld
