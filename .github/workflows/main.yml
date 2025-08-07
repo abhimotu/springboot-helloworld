@@ -34,7 +34,5 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST: ${{ secrets.SONAR_ORG }}
-        run: mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
-           -Dsonar.token=$SONAR_TOKEN \
-           -Dsonar.organization=abhimotu \
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
            -Dsonar.projectKey=abhimotu_springboot-helloworld
