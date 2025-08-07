@@ -10,7 +10,7 @@
     </parent>
 
     
-    <groupId>abhimotu-testing</groupId>
+    <groupId>com.company</groupId>
     <artifactId>springboot-helloworld</artifactId>
     <version>1.0.2-SNAPSHOT</version>
 
