@@ -24,4 +24,4 @@ jobs:
         run: mvn clean verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
            -Dsonar.token=$SONAR_TOKEN \
            -Dsonar.organization=test-sonar-java \
-           -Dsonar.projectKey=java-helloworld
+           -Dsonar.projectKey=test-sonar-java_java-helloworld
