@@ -23,6 +23,5 @@ jobs:
           SONAR_HOST: ${{ secrets.SONAR_ORG }}
         run: mvn clean verify sonar:sonar \
            -Dsonar.token=$SONAR_TOKEN \
-           -Dsonar.host.url=$SONAR_HOST \
            -Dsonar.organization=test-sonar-java \
            -Dsonar.projectKey=java-helloworld
