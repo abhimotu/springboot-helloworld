@@ -10,6 +10,12 @@ jobs:
     steps:
       - name: Checkout repository code
         uses: actions/checkout@v4
+        
+      - name: Set Java
+        uses: actions/setup-java@v4
+        with:
+           distribution: 'temurin'
+           java-version: 17
 
       - name: Run SonarCloud Scan
         env:
